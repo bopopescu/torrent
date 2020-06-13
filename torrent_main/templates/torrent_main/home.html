@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+     <h1>Most Popular Torrents this week</h1>
+    <table class="table">
+        {% include 'torrent_main/list_part_title.html' %}
+      <tbody>
+          {% for obj in week %}
+              {% include 'torrent_main/list_part_items.html' %}
+          {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <!---->
+    <h1>Popular Movie Torrents</h1>
+    <table class="table">
+        {% include 'torrent_main/list_part_title.html' %}
+      <tbody>
+          {% for obj in movie %}
+            <tr>
+                {% include 'torrent_main/list_part_items.html' %}
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+        <br>
+    <!---->
+    <h1>Popular Music Torrents</h1>
+    <table class="table">
+        {% include 'torrent_main/list_part_title.html' %}
+      <tbody>
+          {% for obj in music %}
+            <tr>
+                {% include 'torrent_main/list_part_items.html' %}
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+        <br>
+    <!---->
+    <h1>Popular Application Torrents</h1>
+    <table class="table">
+        {% include 'torrent_main/list_part_title.html' %}
+      <tbody>
+          {% for obj in app %}
+            <tr>
+                {% include 'torrent_main/list_part_items.html' %}
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+        <br>
+    <!---->
+    <h1>Popular Game Torrents</h1>
+    <table class="table">
+        {% include 'torrent_main/list_part_title.html' %}
+      <tbody>
+          {% for obj in game %}
+            <tr>
+                {% include 'torrent_main/list_part_items.html' %}
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <!---->
+    <h1>Popular Other Torrents</h1>
+    <table class="table">
+        {% include 'torrent_main/list_part_title.html' %}
+      <tbody>
+          {% for obj in other %}
+            <tr>
+                {% include 'torrent_main/list_part_items.html' %}
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post" action="{% url 'django_registration_register' %}">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Register</button>
+    </form>
+    <a href="{% url 'password_reset' %}">Forgot password?</a>
+{% endblock %}

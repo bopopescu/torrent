@@ -1,0 +1,12 @@
+ <table class="table" id="list-table">
+    {% include 'torrent_main/list_part_title.html' %}
+  <tbody>
+    <div id="">
+      {% for obj in torrents %}
+        <tr>
+            {% include 'torrent_main/list_part_items.html' %}
+        </tr>
+      {% endfor %}
+    </div>
+  </tbody>
+</table>

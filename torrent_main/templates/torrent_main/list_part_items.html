@@ -1,0 +1,9 @@
+<tr>
+  <td><a href="{% url 'torrent_detail' obj.slug %}">{{ obj.title }}</a></td>
+  <td>{{ obj.get_comment_count }}</td>
+  <td>{{ obj.seeders }}</td>
+  <td>{{ obj.leeches }}</td>
+  <td>{{ obj.date_uploaded }}</td>
+  <td>{{ obj.total_size }}</td>
+  <td>{{ obj.uploaded_by }}</td>
+</tr>

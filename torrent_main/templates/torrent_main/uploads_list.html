@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="get" id="sorting-form" action="{% url 'filter' %}">
+        {{ sorting.form.as_p }}
+    </form>
+     <table class="table" id="list-table">
+    <thead>
+        <tr>
+          <th scope="col">name</th>
+          <th scope="col"></th>
+          <th scope="col">se</th>
+          <th scope="col">le</th>
+          <th scope="col">time</th>
+          <th scope="col">size</th>
+          <th scope="col">uploader</th>
+            <th scope="col">published</th>
+        </tr>
+    </thead>
+  <tbody>
+    <div id="">
+      {% for obj in torrents %}
+        <tr>
+            <tr>
+              <td><a href="{% url 'torrent_detail' obj.slug %}">{{ obj.title }}</a></td>
+              <td>{{ obj.get_comment_count }}</td>
+              <td>{{ obj.seeders }}</td>
+              <td>{{ obj.leeches }}</td>
+              <td>{{ obj.date_uploaded }}</td>
+              <td>{{ obj.total_size }}</td>
+              <td>{{ obj.uploaded_by }}</td>
+              <td>{{ obj.is_pub }}</td>
+            </tr>
+        </tr>
+      {% endfor %}
+    </div>
+  </tbody>
+</table>
+{% endblock %}

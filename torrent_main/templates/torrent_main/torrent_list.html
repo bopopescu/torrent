@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="get" id="sorting-form" action="{% url 'filter' %}">
+        {{ sorting.form.as_p }}
+    </form>
+
+    {% if search_field %}
+        <h1>Result for "<span id="search-val">{{ search_field }}</span>":</h1>
+    {% elif category_value %}
+        <h1>Result for <span id="cat-val">{{ category_value }}</span> category:</h1>
+    {% endif %}
+
+    {% include 'torrent_main/torrent_filter_ajax_response.html' %}
+{% endblock%}

@@ -1,0 +1,4 @@
+Press to activae account
+{{ scheme }}://{{ site }}/accounts/activate/{{ activation_key }}
+
+You have: {{ expiration_days }} days
